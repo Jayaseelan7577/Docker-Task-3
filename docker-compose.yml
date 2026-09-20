@@ -1,0 +1,9 @@
+services:
+  nginx:
+    build: .
+    container_name: docker-task-3-nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx:/var/opt/nginx
+    restart: unless-stopped
